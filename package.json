@@ -1,5 +1,5 @@
 {
-  "name": "start-template",
+  "name": "venevsky.loc",
   "version": "1.0.0",
   "main": "original_gulpfile.js",
   "dependencies": {

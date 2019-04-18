@@ -14,4 +14,15 @@
 
 .header-main
 	padding 20px 0
+	color white
 	background deep-teal
+
+	.container
+		display flex
+		align-items center
+		& > *
+			&:not(:last-child)
+				margin-right 30px
+
+.header-main__basket-prev
+	margin-left auto

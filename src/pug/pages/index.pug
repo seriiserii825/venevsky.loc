@@ -4,11 +4,14 @@ block title
 	title Главная
 
 block content
+	include ../includes/mixins
 	.hidden
-		//- include ../../../build/assets/i/svg/inline/sprite.svg
+		include ../../../build/assets/i/svg/inline/sprite.svg
 
-	.container
-		include ../includes/header
+	include ../includes/header
+
+	include ../includes/banner
+	include ../includes/popular-categories
 
 	include ../includes/scripts/ie-scripts
 	include ../includes/scripts/scripts.pug

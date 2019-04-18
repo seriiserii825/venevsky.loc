@@ -1,0 +1,49 @@
+.categories-prev
+	display flex
+	flex-wrap wrap
+	& > *
+		flex 1 0 calc(25% - 20px)
+		max-width 255px
+		margin-right 20px
+		margin-bottom 30px
+		width calc(25% - 20px)
+		&:nth-child(4n+4)
+			margin-right 0
+
+.categories-prev__item
+	background white
+	border-radius 4px
+	overflow hidden
+
+.categories-prev__img
+	width 255px
+	height 181px
+
+.categories-prev__body
+	padding 15px
+
+.categories-prev__title-text
+	display inline-block
+	margin-bottom 20px
+	font-size 22px
+	font-weight bold
+
+.categories-prev__title-count
+	display inline-block
+	margin-left 5px
+	font-size 14px
+	color silver
+
+.categories-prev__list-item
+	margin-bottom 10px
+	&:last-child
+		margin-top 20px
+		margin-bottom 0
+
+		.categories-prev__link
+			color eucaliptus
+
+.categories-prev__link
+	font-size 14px
+	font-weight bold
+	color text-color

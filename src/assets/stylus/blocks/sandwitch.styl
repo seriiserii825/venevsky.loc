@@ -1,14 +1,14 @@
 .sandwitch
 	// display none
 	position relative
-	width 32px
-	height 20px
+	width 23px
+	height 14px
 	cursor pointer
 
 	&--active
 		.sandwich line
 			&--top
-				top 10px
+				top 6px
 				transform rotate(45deg)
 
 
@@ -17,7 +17,7 @@
 
 
 			&--bottom
-				top 10px
+				top 6px
 				transform rotate(-45deg)
 
 
@@ -30,5 +30,9 @@
 		height 2px
 		transition all linear .4s
 		background-color white
-	&--top
-		top 0
+		&--top
+			top 0
+		&--middle
+			top 6px
+		&--bottom
+			top 12px

@@ -21,6 +21,32 @@ $(function () {
 		$(this).toggleClass('sandwitch--active');
 	});
 
+	if ($(window).width() < 768) {
+		$('#js-categories-prev').slick({
+			slidesToShow: 2,
+			slidesToScroll: 1
+		});
+	}
+
+});
+
+let popularCategoriesSlider = function () {
+	let sliderElement = $('#js-categories-prev');
+
+	if ($(window).width() < 768 && !(sliderElement.hasClass('slick-initialized'))) {
+		console.log('< 768');
+		sliderElement.slick({
+			slidesToShow: 2,
+			slidesToScroll: 1
+		});
+	} else if ($(window).width() > 768 && sliderElement.hasClass('slick-initialized')) {
+		console.log('> 768');
+		sliderElement.slick('unslick');
+	}
+};
+
+$(window).on('resize', function () {
+	popularCategoriesSlider();
 });
 
 

@@ -1,0 +1,23 @@
+section.s-product-slider.section
+	.container
+		header.section-header
+			h2.title-section.popular-categories__title Вы смотрели
+			.section-header__right
+				span.product-slider__count
+
+		.product-prev-slider
+			.slider-nav.slider-nav--prev
+				+icon('slider-nav-icon slider-nav-icon--prev', 'left-chevron')
+			.slider-nav.slider-nav--next
+				+icon('slider-nav-icon slider-nav-icon--next', 'right-chevron')
+
+			.js-product-prev-slider
+				include discount/product-prev-1
+				include discount/product-prev-2
+				include discount/product-prev-3
+				include discount/product-prev-4
+				include discount/product-prev-1
+				include discount/product-prev-2
+				include discount/product-prev-3
+				include discount/product-prev-4
+

@@ -1,0 +1,27 @@
+.product-prev-slider
+	position relative
+
+.slider-nav
+	position absolute
+	top 50%
+	transform translateY(-50%)
+	opacity 0.5
+	transition all .4s
+	z-index 1000
+	cursor pointer
+	&:hover
+		opacity 1
+	&.slick-disabled
+		cursor default
+		opacity 0.5
+
+.slider-nav-icon
+	width 75px
+	height 75px
+	fill text-color
+
+.slider-nav--prev
+	left -85px
+
+.slider-nav--next
+	right -85px

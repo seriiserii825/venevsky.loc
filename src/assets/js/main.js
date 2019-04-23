@@ -28,8 +28,31 @@ $(function () {
 		});
 	}
 
+	let productPrevSlider = function () {
+		let sliderCount = $('.product-slider__count');
+		let productSlider = $('.js-product-prev-slider');
+
+		productSlider.on('init afterChange', function (event, slick, currentSlide, nextSlide) {
+			let i = (currentSlide ? currentSlide : 0) + 1;
+			sliderCount.text('Страниц ' + i + ' из ' + slick.slideCount);
+		});
+
+		$('.js-product-prev-slider').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			prevArrow: '.slider-nav--prev',
+			nextArrow: '.slider-nav--next',
+			infinite: false
+		});
+	};
+
+	productPrevSlider();
+
 });
 
+
+
+// out of jquery
 let popularCategoriesSlider = function () {
 	let sliderElement = $('#js-categories-prev');
 
@@ -43,6 +66,7 @@ let popularCategoriesSlider = function () {
 		console.log('> 768');
 		sliderElement.slick('unslick');
 	}
+
 };
 
 $(window).on('resize', function () {

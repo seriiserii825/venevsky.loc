@@ -1,0 +1,49 @@
+.sales-liders
+	padding-bottom 20px
+
+.sales-liders__row
+	display flex
+	& > *
+		 &:not(:last-child)
+				margin-right 20px
+
+.sales-liders__col
+	flex 1
+
+
+.sales-liders__item
+	display block
+	margin-bottom 20px
+	padding 20px
+	height 240px
+	background-color white
+	border 2px solid transparent
+	border-radius 4px
+	transition all .3s
+	&:hover
+		border-color ripe-lemon
+	.sales-liders__img
+		height 140px
+		img
+			max-height 140px
+
+
+.sales-liders__item--big
+	height 400px
+	.sales-liders__img
+		height 280px
+		img
+			max-height 280px
+	.sales-liders__names
+		font-size 22px
+		line-height 1.2
+
+.sales-liders__img
+	display flex
+	align-items center
+	justify-content center
+	margin-bottom 30px
+
+.sales-liders__names
+	font-weight bold
+	color text-color

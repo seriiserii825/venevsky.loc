@@ -7,9 +7,14 @@
 	background ripe-lemon
 	border none
 	cursor pointer
+	transition all .4s
+	&:hover
+		background turbo
 	& > *
 		 &:not(:last-child)
 				margin-right 10px
+	&--disabled
+		opacity 0.5
 
 .btn--fill
 	width 100%

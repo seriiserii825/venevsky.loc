@@ -1,0 +1,102 @@
+.s-product-prev-line
+	background white
+
+.products-prev
+	display grid
+	grid-template-columns repeat(4, 1fr)
+	grid-column-gap 10px
+
+.product-prev
+	border 2px solid transparent
+	transition all .4s
+	&:hover
+		border-color ripe-lemon
+		box-shadow 0 0 30px 0 rgba(0j 0, 0, 0.1)
+
+		.product-prev__footer
+			opacity 1
+
+.product-prev__header
+	height 270px
+
+.product-prev__body
+	padding 20px
+	display block
+
+.product-prev__marks
+	position absolute
+	text-outline 0
+	left 10
+	& > *
+		 &:not(:last-child)
+				margin-right 10px
+
+.product-prev__mark
+	display inline-block
+	padding 0 4px
+	height 30px
+	line-height 30px
+	font-size 14px
+	border-radius 0 0 4px 4px
+
+
+.product-prev__icon
+	width 25px
+	height 25px
+
+.product-prev__mark--bg-yellow
+	background ripe-lemon
+
+.product-prev__mark--bg-green
+	color white
+	background eucaliptus
+
+.product-prev__name
+	margin-bottom 20px
+	font-weight bold
+	color text-color
+
+.product-prev__info
+	display flex
+	align-items flex-end
+	margin-bottom 15px
+	& > *
+		 &:not(:last-child)
+				margin-right 10px
+
+.product-prev__info-label
+	font-size 11px
+	font-weight bold
+	text-transform uppercase
+	color eucaliptus
+
+.product-prev__info-value
+	font-size 11px
+	color text-color
+
+.product-prev__price
+	display flex
+	align-items center
+	& > *
+		 &:not(:last-child)
+				margin-right 10px
+
+.product-prev__price-old
+	padding 0 5px
+	font-size 14px
+	text-decoration line-through
+	color silver
+
+.product-prev__price-current
+	font-size 18px
+	font-weight bold
+	color text-color
+
+.product-prev__footer
+	opacity 0
+	transition all .5s
+
+
+
+
+

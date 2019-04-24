@@ -1,0 +1,31 @@
+.s-questions
+	background concrete
+.questions
+	display flex
+	align-items center
+	justify-content space-between
+
+.ask-your-question
+	display flex
+	align-items center
+	& > *
+		 &:not(:last-child)
+				margin-right 30px
+	&__list
+		display flex
+		align-items center
+		& > *
+			&:not(:last-child)
+					margin-right 20px
+	&__link
+		display flex
+		align-items center
+		& > *
+			&:not(:last-child)
+					margin-right 10px
+	&__text
+		color text-color
+
+.ask-your-question__icon
+	fill text-color
+	size(24px)

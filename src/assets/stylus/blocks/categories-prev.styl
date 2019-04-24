@@ -25,9 +25,15 @@
 .categories-prev__body
 	padding 15px
 
-.categories-prev__title-text
-	display inline-block
+.categories-prev__title
+	display flex
+	justify-content flex-start
+	align-items flex-end
 	margin-bottom 20px
+	.count-text
+		flex 1
+
+.categories-prev__title-text
 	font-size 22px
 	font-weight bold
 
@@ -36,11 +42,3 @@
 	&:last-child
 		margin-top 20px
 		margin-bottom 0
-
-		.categories-prev__link
-			color eucaliptus
-
-.categories-prev__link
-	font-size 14px
-	font-weight bold
-	color text-color

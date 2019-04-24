@@ -1,0 +1,23 @@
+section.s-questions.section.s-size-small
+	.container
+		.questions
+			.upgrade
+				.upgrade__icon-wrapper
+					+icon('upgrade__icon', 'question')
+				a(href="").link.link--underline.upgrade__link Что можно улучшить на этой странице?
+
+			.ask-your-question
+				h3.ask-your-question__text Задайте вопрос
+				ul.ask-your-question__list
+					li.ask-your-question__item
+						a(href="").ask-your-question__link
+							+icon('ask-your-question__icon', 'messenger')
+							span.ask-your-question__text Messenger
+					li.ask-your-question__item
+						a(href="").ask-your-question__link
+							+icon('ask-your-question__icon', 'telegram')
+							span.ask-your-question__text Telegram
+					li.ask-your-question__item
+						a(href="").ask-your-question__link
+							+icon('ask-your-question__icon', 'vk')
+							span.ask-your-question__text Vk

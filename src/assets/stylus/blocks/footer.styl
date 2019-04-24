@@ -1,0 +1,85 @@
+.footer
+	color juniper
+	&-top
+		padding 30px 0
+		color white
+		background deep-teal-lightest
+
+	&-bottom
+		padding 10px 0
+		font-size 12px
+		background deep-teal-darkest
+		.container
+			& > *
+				margin 10px 0
+				&:first-child
+						margin-top 0
+				&:last-child
+						margin-bottom 0
+		&__line
+			& > *
+				 &:not(:last-child)
+						margin-right 30px
+		&__link
+			color juniper
+			text-decoration underline
+
+	&-callback
+		display flex
+		margin-bottom 40px
+		& > *
+			 &:not(:last-child)
+					margin-right 20px
+		&__img
+			height 66px
+
+	&__title
+		display block
+		margin-bottom 10px
+		font-weight bold
+
+	&-main
+		display flex
+		& > *
+			flex 1
+			 &:not(:last-child)
+					margin-right 20px
+
+	&-nav
+		&__list
+			& > *
+				 margin 10px 0
+				 &:first-child
+						margin-top 0
+				 &:last-child
+						margin-bottom 0
+		&__item
+			margin-bottom 10px
+		&__link
+			font-size 14px
+		&__descr
+			margin-left 10px
+			font-size 12px
+			color juniper
+
+	&-contacts
+		position relative
+		margin-bottom 25px
+		padding-left 25px
+		&__icon
+			position absolute
+			top 0
+			left 0
+			size(16px)
+			fill white
+		&__title
+			display block
+			margin-bottom 5px
+			font-size 14px
+			font-weight bold
+		&__text
+			font-size 12px
+		&__link
+			display inline-block
+			margin-left 10px
+			text-decoration underline

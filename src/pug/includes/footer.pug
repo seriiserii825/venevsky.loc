@@ -1,0 +1,76 @@
+mixin footerNavLink(link, text, descr)
+	li.footer-nav__item
+		a(href=link).footer-nav__link= text
+		if(descr)
+			span.footer-nav__descr= descr
+
+.footer
+	.footer-top
+		.container
+			.footer-callback
+				img(src="assets/i/wikipedia.svg", alt="").footer-callback__img
+				include order-callback
+
+			.footer-main
+				.footer__col
+					span.footer__title О нас
+					ul.footer-nav__list
+						+footerNavLink('', 'Оплата и доставка', '')
+						+footerNavLink('', 'Гарантия', '')
+						+footerNavLink('', 'Услуги по обработке металла', '')
+						+footerNavLink('', 'Компания', '')
+						+footerNavLink('', 'Контакты', 'Связь с директором')
+
+				.footer__col
+					span.footer__title Каталог
+					ul.footer-nav__list
+						+footerNavLink('', 'Все для кровли', '')
+						+footerNavLink('', 'Фасад', '')
+						+footerNavLink('', 'Профнастил', '')
+						+footerNavLink('', 'Листовой прокат', '')
+						+footerNavLink('', 'Рулонная сталь', '')
+
+				.footer__col
+					.footer__block
+						span.footer__title Принимаем к оплате
+
+						.payment-types
+							ul.payment-types__list
+								li.payment-types__item
+									img(src="assets/i/visa.svg", alt="").payment-types__img
+								li.payment-types__item
+									img(src="assets/i/mastercard.svg", alt="").payment-types__img
+								li.payment-types__item
+									img(src="assets/i/mir.svg", alt="").payment-types__img
+
+							a(href="").link--underline.link--yellow Оплата заказов онлайн
+
+					.footer__block
+						span.footer__title Акции и спецпредложения
+
+				.footer__col
+					.footer__block
+						span.footer__title Контакты
+						.footer-contacts
+							+icon('footer-contacts__icon', 'map')
+							span.footer-contacts__title Офис
+							p.footer-contacts__text 111033, Москва, ул.Золоторожский вал, д. 11, стр. 9
+								a(href="") карте на
+
+						.footer-contacts
+							+icon('footer-contacts__icon', 'map')
+							span.footer-contacts__title Производство и склад
+							p.footer-contacts__text Москвоска обл., Ленинский р-н, г. Видное, Северная Я.видносвкая промзона, ФГУП «Комплекс»!
+								a(href="").footer-contacts__link  карте на
+
+					.footer__block
+
+	.footer-bottom
+		.container
+			.footer-bottom__line
+				span.copyright @ 2018 Завод Веневский
+				a(href="").footer-bottom__link Политика конфиденциальности
+				a(href="").footer-bottom__link Карта сайта
+			.footer-bottom__line
+				p.footer-bottom__text Сайт yenev.ru носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями ГК РФ.
+				p.footer-bottom__text Для получения подробной информации о наличии, 2 Твидах, характеристиках и стоимости материалов, 2 ^пожалуйста, обращайтесь в офисы продаж.|

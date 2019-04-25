@@ -64,8 +64,13 @@
 
 .catalog-nav__item
 	&:hover .catalog-subnav
-		display flex
+		display block
 
+.catalog-subnav__inner
+	display flex
+	& > *
+		 &:not(:last-child)
+				margin-right 30px
 
 .catalog-subnav
 	position absolute
@@ -78,10 +83,8 @@
 	width 675px
 	background white
 	border-left 1px solid ripe-lemon
-	overflow auto
-	& > *
-		 &:not(:last-child)
-				margin-right 30px
+	.simplebar-vertical
+		margin 10px
 	&__col
 		flex 1
 

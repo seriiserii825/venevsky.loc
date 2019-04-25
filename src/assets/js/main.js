@@ -19,6 +19,8 @@ $(function () {
 
 	let sandwitch = function () {
 		$(document).on('click', '.catalog-nav__header', function () {
+			let catalogNav = $(this).closest('.catalog-nav');
+			catalogNav.toggleClass('catalog-nav--active');
 			let sandwitch = $(this).find('.sandwitch');
 			sandwitch.toggleClass('sandwitch--active');
 		});

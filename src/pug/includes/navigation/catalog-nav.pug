@@ -1,0 +1,74 @@
+mixin subnavItem(link, text, count)
+	li.catalog-subnav__item
+		a(href=link).catalog-subnav__item
+			span.catalog-subnav__text= text
+			span.count-text= count
+
+
+.header-main__catalog-nav.catalog-nav
+	.catalog-nav__header
+		.sandwitch
+			.sandwitch__line.sandwitch__line--top
+			.sandwitch__line.sandwitch__line--middle
+			.sandwitch__line.sandwitch__line--bottom
+		h4.catalog-nav__title Каталог стройматериалов
+
+	.catalog-nav__body
+		ul.catalog-nav__list
+			li.catalog-nav__item
+				.catalog-nav__label
+					span.catalog-nav__label-text Рулонная сталь
+					.catalog-nav__arrow
+				include catalog-subnav-1
+			li.catalog-nav__item
+				.catalog-nav__label
+					span.catalog-nav__label-text Профнастил
+					.catalog-nav__arrow
+				include catalog-subnav-2
+			li.catalog-nav__item
+				.catalog-nav__label
+					span.catalog-nav__label-text Листовой прокат
+					.catalog-nav__arrow
+				include catalog-subnav-3
+			li.catalog-nav__item
+				.catalog-nav__label
+					span.catalog-nav__label-text Фасад
+					.catalog-nav__arrow
+				include catalog-subnav-4
+			li.catalog-nav__item
+				.catalog-nav__label
+					span.catalog-nav__label-text Распродажа
+					.catalog-nav__arrow
+				include catalog-subnav-1
+			li.catalog-nav__item
+				.catalog-nav__label
+					span.catalog-nav__label-text Специальные предложения
+					.catalog-nav__arrow
+				include catalog-subnav-3
+			li.catalog-nav__item
+				.catalog-nav__label
+					span.catalog-nav__label-text Фасад
+					.catalog-nav__arrow
+				include catalog-subnav-2
+			li.catalog-nav__item
+				.catalog-nav__label
+					span.catalog-nav__label-text Распродажа
+					.catalog-nav__arrow
+				include catalog-subnav-4
+			li.catalog-nav__item
+				.catalog-nav__label
+					span.catalog-nav__label-text Специальные предложения
+					.catalog-nav__arrow
+			li.catalog-nav__item
+				.catalog-nav__label
+					span.catalog-nav__label-text Фасад
+					.catalog-nav__arrow
+			li.catalog-nav__item
+				.catalog-nav__label
+					span.catalog-nav__label-text Распродажа
+					.catalog-nav__arrow
+			li.catalog-nav__item
+				.catalog-nav__label
+					span.catalog-nav__label-text Специальные предложения
+					.catalog-nav__arrow
+				include catalog-subnav-1

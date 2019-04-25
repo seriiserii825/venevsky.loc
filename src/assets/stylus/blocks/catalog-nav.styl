@@ -1,3 +1,8 @@
+.catalog-nav
+	&.catalog-nav--active
+		.catalog-nav__body
+			display block
+
 .catalog-nav__header
 	display flex
 	align-items center
@@ -8,3 +13,98 @@
 
 .catalog-nav__title
 	white-space nowrap
+
+.catalog-nav__body
+	position absolute
+	left 80px
+	top 80px
+	display none
+	color text-color
+	background white
+	border-radius 4px
+	box-shadow: 0 0 5px 0 rgba(159, 197, 178, 0.5)
+	z-index 1
+	&::before
+		position absolute
+		top -10px
+		left 185px
+		content ''
+		width 0
+		height 0
+		border-style solid
+		border-width 0 10px 10px 10px
+		border-color transparent transparent white transparent
+
+.catalog-nav__list
+	width 255px
+
+.catalog-nav__label
+	display flex
+	align-items center
+	padding 6px 15px
+	cursor pointer
+	transition all .3s
+	&:hover
+		background ripe-lemon
+	& > *
+		 &:not(:last-child)
+				margin-right 5px
+	&-text
+		font-size 14px
+		font-weight 600
+		line-height 18px
+
+.catalog-nav__arrow
+	margin-left auto
+	width 0
+	height 0
+	border-style solid
+	border-width 5px 0 5px 5px
+	border-color transparent transparent transparent black
+
+.catalog-nav__item
+	&:hover .catalog-subnav
+		display flex
+
+
+.catalog-subnav
+	position absolute
+	top 0
+	bottom 0
+	text-outline 0
+	left calc(100% - 2px)
+	display none
+	padding 15px 20px
+	width 675px
+	background white
+	border-left 1px solid ripe-lemon
+	overflow auto
+	& > *
+		 &:not(:last-child)
+				margin-right 30px
+	&__col
+		flex 1
+
+	&__block
+		margin-bottom 30px
+
+	&__header
+		display flex
+		align-items center
+		margin-bottom 10px
+		font-weight bold
+
+	&__title
+		font-size 18px
+		line-height 26px
+	&__list
+		& > *
+			display block
+			 margin 10px 0
+			 &:first-child
+					margin-top 0
+			 &:last-child
+					margin-bottom 0
+	&__link
+		font-size 14px
+		font-weight bold

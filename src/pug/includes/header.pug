@@ -26,11 +26,9 @@ header.header
 			.logo
 				img.logo__img(src="assets/i/logo.jpg", alt="logo")
 				span.logo__text Продажа стройматериалов
-			.header-main__catalog-nav.catalog-nav
-				.catalog-nav__header
-					h4.catalog-nav__title Каталог стройматериалов
-					include sandwitch
-				.catalog-nav__body
+
+			include navigation/catalog-nav
+
 			.header-main__search.search
 				input.input.input--size-small.search__input(type="text" placeholder="Артикул или название товара")
 				+icon('search__icon', 'search')

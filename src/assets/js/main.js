@@ -17,9 +17,13 @@ $(function () {
 		fixedBackground: true
 	});
 
-	$(document).on('click', '.sandwitch', function () {
-		$(this).toggleClass('sandwitch--active');
-	});
+	let sandwitch = function () {
+		$(document).on('click', '.catalog-nav__header', function () {
+			let sandwitch = $(this).find('.sandwitch');
+			sandwitch.toggleClass('sandwitch--active');
+		});
+	};
+
 
 	if ($(window).width() < 768) {
 		$('#js-categories-prev').slick({
@@ -47,6 +51,7 @@ $(function () {
 	};
 
 	productPrevSlider();
+	sandwitch();
 
 });
 

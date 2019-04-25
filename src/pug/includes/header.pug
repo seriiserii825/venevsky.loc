@@ -1,11 +1,7 @@
 header.header
 	.header-top
 		.container
-			.header-top__location.location
-				header.location__header
-					+icon('location__icon', 'map')
-					span.location__current Нижний Новгород
-				.location__body
+			include header/location
 			nav.main-nav.header-top__main-nav
 				ul.main-nav__list
 					li.main-nav__item

@@ -52,8 +52,32 @@ $(function () {
 		});
 	};
 
+	var locationChoose = function () {
+		$('.location-question__btn').on('click', function () {
+			var answer = $(this).data('location');
+			if (answer === 'no') {
+				$('#js-location__body').addClass('is-location-choose');
+			}
+			$('#js-location-question').hide();
+		});
+
+		$('#js-location-choose__list .location-choose__item').on('click', function () {
+			var locationChooseItemText = $(this).text();
+			var locationCurrent = $('#js-location__current');
+
+			locationCurrent.text(locationChooseItemText);
+
+			$('#js-location__body').removeClass('is-location-choose');
+		});
+
+		$('#js-location__header').on('click', function (e) {
+			$('#js-location__body').addClass('is-location-choose');
+		});
+	};
+
 	productPrevSlider();
 	sandwitch();
+	locationChoose();
 
 });
 

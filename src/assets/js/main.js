@@ -70,9 +70,15 @@ $(function () {
 			$('#js-location__body').removeClass('is-location-choose');
 		});
 
+		$('#js-location-choose__list .location-choose__item').on('mouseenter', function () {
+			$('#js-location-input').val($(this).text());
+		});
+
 		$('#js-location__header').on('click', function (e) {
 			$('#js-location__body').addClass('is-location-choose');
 		});
+
+
 	};
 
 	productPrevSlider();

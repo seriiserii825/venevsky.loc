@@ -5,12 +5,13 @@
 			.popup-close
 				+icon('popup-close__icon', 'close')
 		.popup__body
-			form.popup__form
+			form.popup__form.form
 				.form__body
 					.form-line
 						.form-group.form-group--width-m.form-group--required
 							label.form-group__label Контактный телефон
-							input.input(placeholder="+7(912)123-34-45" type="phone")
+							input.input(placeholder="+7(912)123-34-45" type="phone" name="phone")
+
 					.form-line
 						.form-group
 							label.form-group__label Вопросы и ответы
@@ -28,7 +29,7 @@
 					.form-line
 						.form-group.form-group--width-m
 							input(type="submit" value="Поулучить консультацию").btn.btn-size-l
-						span.form-line__info.form-line__info--color-green Ответим в течении 10 минуто
+						span.form-line__info.form-line__info--color-green Ответим в течении 10 минут
 					.form-line
 						p.popup-info Задавая вопрос, вы соглашаетесь с <a href="" class="popup-info__link"> политикой конфиденциальности</a>
 

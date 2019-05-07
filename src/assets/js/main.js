@@ -96,11 +96,55 @@ $(function () {
 		});
 	};
 
+	let formValidate = function () {
+		$('.form').each(function () {
+			$(this).on(' submit', function () {
+				$(this).validate({
+					rules: {
+						name: {
+							required: true,
+						},
+						phone: {
+							required: true
+						},
+						email: {
+							required: true,
+							email: true
+						},
+						password: {
+							required: true
+						}
+					},
+					messages: {
+						name: 'Введите корректное имя',
+						phone: 'Введите корректный номер',
+						email: 'Введите корректный email',
+						password: 'Введите корректный пароль'
+					},
+					errorPlacement: function (error, element) {
+						console.log(error);
+						console.log(element);
+						element.attr("placeholder", error[0].outerText);
+					}
+				});
+				if ($(this).valid()) {
+					let wrap = $(this)[0].closest('.hide-on-succes');
+					if (wrap) {
+						$(wrap).siblings('.show-on-succes').show();
+						$(wrap).hide();
+					}
+				}
+				return false;
+			});
+		});
+	};
+
 	productPrevSlider();
 	sandwitch();
 	locationChoose();
 	popupLink();
 	fileupload();
+	formValidate();
 
 
 });

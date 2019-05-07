@@ -8,30 +8,33 @@ size(number)
 	height number
 
 placeholder-input(color)
-	input[type='text']::-webkit-input-placeholder,
-	input[type='email']::-webkit-input-placeholder,
-	input[type='phone']::-webkit-input-placeholder
-		color color
-	/* webkit */
-
-	input[type='text']::-moz-placeholder,
-	input[type='email']::-moz-placeholder,
-	input[type='phone']::-moz-placeholder
+	&[type='text']::-webkit-input-placeholder,
+	&[type='email']::-webkit-input-placeholder,
+	&[type='phone']::-webkit-input-placeholder
 		color color
 
-	/* webkit */
-
-	input[type='text']:-moz-placeholder,
-	input[type='email']:-moz-placeholder,
-	input[type='phone']:-moz-placeholder
+	&[type='text']::-moz-placeholder,
+	&[type='email']::-moz-placeholder,
+	&[type='phone']::-moz-placeholder
 		color color
 
 	/* webkit */
 
-	input[type='text']:-ms-input-placeholder,
-	input[type='email']:-ms-input-placeholder,
-	input[type='phone']:-ms-input-placeholder
+	&[type='text']:-moz-placeholder,
+	&[type='email']:-moz-placeholder,
+	&[type='phone']:-moz-placeholder
 		color color
+
+	/* webkit */
+
+	&[type='text']:-ms-input-placeholder,
+	&[type='email']:-ms-input-placeholder,
+	&[type='phone']:-ms-input-placeholder
+		color color
+
+// placeholder-input(color)
+// 	&[type='phone']::-webkit-input-placeholder
+// 		color color
 
 placeholder-textarea(color)
 	textarea::-webkit-input-placeholder

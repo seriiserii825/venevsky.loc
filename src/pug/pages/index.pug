@@ -1,5 +1,10 @@
 extends template
 
+block css
+	//- link(rel="stylesheet" type="text/css" href="assets/i/svg/bg/css/sprite.css")
+	link(rel="stylesheet" type="text/css" href="assets/css/style.min.css")
+	link(rel="stylesheet" type="text/css" href="assets/css/style.min.css")
+
 block title
 	title Главная
 
@@ -19,10 +24,12 @@ block content
 	include ../includes/you-see
 	include ../includes/questions
 	include ../includes/footer
+	include ../includes/popups/consultation
 
 	include ../includes/scripts/ie-scripts
 	include ../includes/scripts/scripts.pug
 	script(src="assets/libs/slick/slick/slick.min.js")
 	script(src="assets/libs/simplebar/dist/simplebar.min.js")
+	script(src="assets/libs/Magnific-Popup/dist/jquery.magnific-popup.min.js")
 	script(src="assets/js/main.min.js")
 

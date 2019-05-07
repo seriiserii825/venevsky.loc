@@ -1,0 +1,37 @@
+.form
+	&-line
+		display flex
+		align-items center
+		& > *
+			&:not(:last-child)
+					margin-right 20px
+		&__info
+			&--color-green
+				font-size 14px
+				font-weight bold
+				color parsley
+.form-group
+	display flex
+	flex 1
+	flex-direction column
+	&.form-group--required
+		.form-group__label
+			&::after
+				content '*'
+				position relative
+				top 2px
+				display inline-block
+				margin-left 4px
+				font-size 20px
+				color crimson
+	&.form-group--width-m
+		max-width 245px
+	&__label
+		margin-bottom 10px
+		font-size 12px
+		letter-spacing .65px
+		text-transform uppercase
+		color dust-gray
+	&__submit
+		display flex
+		justify-content space-between

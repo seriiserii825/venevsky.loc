@@ -1,0 +1,50 @@
+.popup
+	position relative
+	margin auto
+	max-width 520px
+	border-radius 10px
+	overflow hidden
+	&__header
+		display flex
+		align-items center
+		justify-content space-between
+		padding 20px 40px
+		background concrete
+	&__title
+		font-size 18px
+		line-height 1.44
+	&__body
+		padding 20px 40px
+		background white
+	&-close
+		display flex
+		align-items center
+		justify-content center
+		width 25px
+		height 25px
+		&:hover
+			cursor pointer
+		&__icon
+			width 16px
+			height 16px
+			transition all .4s
+			opacity 0.2
+			&:hover
+				opacity 0.7
+	&__footer
+		& > *
+			 margin 10px 0
+			 &:first-child
+					margin-top 0
+			 &:last-child
+					margin-bottom 0
+	&-info
+		font-size 12px
+		color silver
+		&__link
+			text-decoration underline
+			color silver
+
+.mfp-bg
+	background gulf-stream
+	opacity .8

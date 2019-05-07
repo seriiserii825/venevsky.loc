@@ -1,0 +1,18 @@
+.file-upload
+	display flex
+	align-items center
+	cursor pointer
+	input[type='file']
+		display none
+	&__custom
+		display flex
+		align-items center
+		font-size 14px
+		font-weight bold
+		& > *
+			 &:not(:last-child)
+					margin-right 10px
+	&__icon
+		width 12px
+		height 16px
+		fill green

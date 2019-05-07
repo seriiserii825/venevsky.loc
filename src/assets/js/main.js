@@ -38,7 +38,7 @@ $(function () {
 		let sliderCount = $('.product-slider__count');
 		let productSlider = $('.js-product-prev-slider');
 
-		productSlider.on('init afterChange', function (event, slick, currentSlide, nextSlide) {
+		productSlider.on('init afterChange', function (event, slick, currentSlide) {
 			let i = (currentSlide ? currentSlide : 0) + 1;
 			sliderCount.text('Страниц ' + i + ' из ' + slick.slideCount);
 		});
@@ -74,20 +74,36 @@ $(function () {
 			$('#js-location-input').val($(this).text());
 		});
 
-		$('#js-location__header').on('click', function (e) {
+		$('#js-location__header').on('click', function () {
 			$('#js-location__body').addClass('is-location-choose');
 		});
+	};
 
+	let popupLink = function () {
+		$('.js-popup-link').magnificPopup({
+			showCloseBtn: false
+		});
 
+		$(document).on('click', '.popup-close', function () {
+			$.magnificPopup.close();
+		});
+	};
+
+	let fileupload = function () {
+		$(".file-upload input[type=file]").change(function () {
+			let filename = $(this).val().replace(/.*\\/, "");
+			$(this).closest('.file-upload').find('.file-upload__text').html(filename);
+		});
 	};
 
 	productPrevSlider();
 	sandwitch();
 	locationChoose();
+	popupLink();
+	fileupload();
+
 
 });
-
-
 
 // out of jquery
 let popularCategoriesSlider = function () {
@@ -104,11 +120,9 @@ let popularCategoriesSlider = function () {
 		sliderElement.slick('unslick');
 	}
 
+
 };
 
 $(window).on('resize', function () {
 	popularCategoriesSlider();
 });
-
-
-

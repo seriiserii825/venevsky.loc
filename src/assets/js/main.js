@@ -156,6 +156,17 @@ $(function () {
 		});
 	};
 
+	let contactPopups = function () {
+		$('.contacts-popup .contacts-popup__toggle').on('click', function () {
+			let contactsParent = $(this).parent();
+			contactsParent.addClass('contacts-popup--active');
+		});
+
+		$('.contacts-popup__close').on('click', function () {
+			$(this).closest('.contacts-popup').removeClass('contacts-popup--active');
+		});
+	};
+
 	productPrevSlider();
 	sandwitch();
 	locationChoose();
@@ -163,6 +174,7 @@ $(function () {
 	fileupload();
 	formValidate();
 	reviewLine();
+	contactPopups();
 
 
 });
@@ -188,3 +200,31 @@ let popularCategoriesSlider = function () {
 $(window).on('resize', function () {
 	popularCategoriesSlider();
 });
+
+if ($('div').is('.contacts-popup__map')) {
+	ymaps.ready(function () {
+		var myMap = new ymaps.Map('js-contacts-popup__map', {
+			center: [55.751574, 37.573856],
+			zoom: 9
+		}, {
+				searchControlProvider: 'yandex#search'
+			}),
+
+			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+			}, {
+					// Опции.
+					// Необходимо указать данный тип макета.
+					iconLayout: 'default#image',
+					// Своё изображение иконки метки.
+					iconImageHref: 'assets/i/placeholder.svg',
+					// Размеры метки.
+					iconImageSize: [76, 89],
+					// Смещение левого верхнего угла иконки относительно
+					// её "ножки" (точки привязки).
+					iconImageOffset: [-5, -38]
+				});
+
+		myMap.geoObjects
+			.add(myPlacemark)
+	});
+}

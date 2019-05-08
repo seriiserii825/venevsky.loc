@@ -59,14 +59,27 @@ mixin footerNavLink(link, text, descr)
 							+icon('footer-contacts__icon', 'map')
 							span.footer-contacts__title Офис
 							p.footer-contacts__text 111033, Москва, ул.Золоторожский вал, д. 11, стр. 9
-								a(href="") карте на
 
 					.footer__block
 						.footer-contacts
 							+icon('footer-contacts__icon', 'map')
 							span.footer-contacts__title Производство и склад
 							p.footer-contacts__text Москвоска обл., Ленинский р-н, г. Видное, Северная Я.видносвкая промзона, ФГУП «Комплекс»!
-								a(href="").footer-contacts__link  карте на
+								.contacts-popup
+									.contacts-popup__toggle на карте
+									.contacts-popup__body
+										.contacts-popup__map#js-contacts-popup__map
+										.contacts-popup__info
+											.contacts-popup__close
+												+icon('contacts-popup__close-icon', 'close')
+											span.contacts-popup__title Центральный офис в Москве
+											span.contacts-popup__text 111033, Москва, ул. Золоторожский вал, дом 11, строение 9
+											.contacts-popup__bLock
+												span.contacts-popup__label Время работы:
+												span.contacts-popup__text пн-пт 9:00-18:00
+											.contacts-popup__qr
+												span.contacts-popup__text Для построения маршрута наведите камеру телефона на QR-код
+												+icon('contacts-popup__icon', 'wiki').contacts-popup__icon
 
 
 	.footer-bottom

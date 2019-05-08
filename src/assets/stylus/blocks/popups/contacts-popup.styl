@@ -1,0 +1,71 @@
+.contacts-popup
+	position relative
+	display inline-block
+	&.contacts-popup--active
+		.contacts-popup__body
+			display flex
+	&__close
+		position absolute
+		top 30px
+		right 30px
+		display flex
+		justify-content center
+		align-items center
+		size(20px)
+		cursor pointer
+		&-icon
+			size(16px)
+	&__toggle
+		display inline-block
+		margin-left 10px
+		text-decoration underline
+		color white
+		cursor pointer
+	&__body
+		position absolute
+		bottom 28px
+		right 0
+		display none
+		width 692px
+		align-items center
+		color text-color
+		background white
+		box-shadow 0 0 30px 0 rgba(0, 0, 0, 0.2)
+		&::after
+			content ''
+			position absolute
+			bottom -12px
+			right 10px
+			width 0
+			height 0
+			border-style solid
+			border-width 12px 12px 0 12px
+			border-color white transparent transparent transparent
+	&__info
+		position relative
+		flex 0 0 260px
+		padding 60px 20px
+		background white
+	&__icon
+		display block
+		size(96px)
+	&__title
+		display block
+		margin-bottom 20px
+		font-size 18px
+		line-height 1.44
+	&__text
+		display block
+		margin-bottom 10px
+		font-size 14px
+		line-height 18px
+	&__block
+		display flex
+		flex-direction column
+		margin-bottom 20px
+	&__label
+		font-weight bold
+		font-size 14px
+	&__map
+		flex 1
+		height 400px

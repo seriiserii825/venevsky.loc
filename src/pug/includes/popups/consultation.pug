@@ -47,7 +47,7 @@
 					p.form-success__descr Менеджер позвонит на указанный телефон сегодня до 14:43 по московскому времени.
 
 				.form-success__block
-					span.form-success__label Не готовы ждать
+					span.popup__subtitle Не готовы ждать?
 					.form-success__row
 						.form-success__col
 							.form-success-contacts
@@ -66,3 +66,25 @@
 								span.form-success-contacts__text Напишите нам e-mail
 
 								a(href="mailto:question@venevsky.ru").link--green question@venevsky.ru
+
+		.fast-review
+			form.form.fast-review-form
+				span.popup__subtitle Насколько быстро вы нашли товар?
+			.review-line__wrapper
+				.review-line#js-review-line
+				.review-line__inner#js-review-line__inner
+					.review-line__item.review-line__item--left.review-line__item--active(data-fast-review="очень долго")
+						.review-line__number 1
+					.review-line__item.review-line__item--left(data-fast-review="долго")
+						.review-line__number 2
+					.review-line__item.review-line__item--center(data-fast-review="нормально")
+						.review-line__number 3
+					.review-line__item.review-line__item--right(data-fast-review="быстро")
+						.review-line__number 4
+					.review-line__item.review-line__item--right(data-fast-review="очень бьстро")
+						.review-line__number 5
+
+			.fast-review__line
+				.form-group.form-group--width-l.fast-review__line-form-group
+					input(type="text" placeholder="коментарий (необязательно)").input.input--width-s
+					input(type="submit" value="отправить").btn.btn--size-l

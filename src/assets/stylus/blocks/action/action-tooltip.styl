@@ -1,0 +1,28 @@
+.action-tooltip
+	position absolute
+	display flex
+	justify-content space-between
+	padding 10px
+	color text-color
+	background white
+	border-radius 4px
+	& > *
+		 &:not(:last-child)
+				margin-right 10px
+	&::before
+		content ''
+		position absolute
+		top -5px
+		left 10px
+		width 0
+		height 0
+		border-style solid
+		border-width 0 5px 5px 5px
+		border-color transparent transparent white transparent
+	&__icon
+		top 15px
+		left 8px
+		flex 0 0 15px
+		size(16px)
+	&__text
+		font-size 12px

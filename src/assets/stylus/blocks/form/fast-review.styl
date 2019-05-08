@@ -1,0 +1,64 @@
+.fast-review
+	padding 20px 40px 40px
+	background concrete
+	.popup__subtitle
+		padding-bottom 25px
+	&__line-form-group
+		padding-top 40px
+.review-line
+	position absolute
+	left 1px
+	height 100%
+	background turbo
+	transition all .4s ease
+	z-index 1
+	&__wrapper
+		position relative
+		margin-bottom 30px 0
+	&__inner
+		display flex
+		justify-content space-between
+		align-items flex-end
+		height 5px
+		background gallery
+	&__item
+		position relative
+		margin-bottom -6px
+		height 20px
+		border-left 1px solid gallery
+		&::before
+			content attr(data-fast-review)
+			position absolute
+			top -10px
+			display block
+			font-size 12px
+			white-space nowrap
+		&.review-line__item--center
+			&::before
+				left 50%
+				transform translateX(-50%)
+		&.review-line__item--right
+			&::before
+				left auto
+				right 0
+		&.review-line__item--active
+			.review-line__number
+				background turbo
+	&__number
+		position absolute
+		top 100%
+		left -8px
+		display flex
+		align-items center
+		justify-content center
+		width 20px
+		height 20px
+		font-size 14px
+		line-height 24px
+		text-align center
+		border-radius 50%
+		transition all .4s ease
+		&:hover
+			background-color white
+			cursor pointer
+			transition all .4s ease

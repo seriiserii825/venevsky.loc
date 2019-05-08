@@ -145,12 +145,24 @@ $(function () {
 		});
 	};
 
+	let reviewLine = function () {
+		$('#js-review-line__inner .review-line__number').on('click', function () {
+			let left = $(this).parent().position().left;
+			$('#js-review-line').css('width', left - 1);
+
+			$('#js-review-line__inner .review-line__item').removeClass('review-line__item--active');
+
+			$(this).parent().addClass('review-line__item--active');
+		});
+	};
+
 	productPrevSlider();
 	sandwitch();
 	locationChoose();
 	popupLink();
 	fileupload();
 	formValidate();
+	reviewLine();
 
 
 });

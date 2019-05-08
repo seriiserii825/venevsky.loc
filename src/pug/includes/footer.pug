@@ -46,7 +46,11 @@ mixin footerNavLink(link, text, descr)
 							a(href="").link--underline.link--yellow Оплата заказов онлайн
 
 					.footer__block
-						span.footer__title Акции и спецпредложения
+						.footer__action
+							span.footer__title.footer__action-title Акции и спецпредложения
+							.action-tooltip
+								+icon('action-tooltip__icon', 'gift')
+								span.action-tooltip__text Мультиварка в подарок до 31 декабря!
 
 				.footer__col
 					.footer__block
@@ -57,13 +61,13 @@ mixin footerNavLink(link, text, descr)
 							p.footer-contacts__text 111033, Москва, ул.Золоторожский вал, д. 11, стр. 9
 								a(href="") карте на
 
+					.footer__block
 						.footer-contacts
 							+icon('footer-contacts__icon', 'map')
 							span.footer-contacts__title Производство и склад
 							p.footer-contacts__text Москвоска обл., Ленинский р-н, г. Видное, Северная Я.видносвкая промзона, ФГУП «Комплекс»!
 								a(href="").footer-contacts__link  карте на
 
-					.footer__block
 
 	.footer-bottom
 		.container

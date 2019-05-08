@@ -37,19 +37,19 @@ placeholder-input(color)
 // 		color color
 
 placeholder-textarea(color)
-	textarea::-webkit-input-placeholder
+	&::-webkit-input-placeholder
 		color color
 	/* webkit */
 
-	textarea::-moz-placeholder
-		color color
-
-	/* webkit */
-
-	textarea:-moz-placeholder
+	&::-moz-placeholder
 		color color
 
 	/* webkit */
 
-	textarea:-ms-input-placeholder
+	&:-moz-placeholder
+		color color
+
+	/* webkit */
+
+	&:-ms-input-placeholder
 		color color

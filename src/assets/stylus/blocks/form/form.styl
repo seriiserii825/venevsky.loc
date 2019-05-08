@@ -3,6 +3,10 @@
 @import 'input'
 @import 'textarea'
 
+.show-on-succes
+	.popup__body
+		padding 0
+
 .form
 	&__body
 		margin-bottom 30px
@@ -12,3 +16,53 @@
 					margin-top 0
 			 &:last-child
 					margin-bottom 0
+	&-success
+		background concrete
+		& > *
+			 margin 10px 0
+			 &:first-child
+					margin-top 0
+			 &:last-child
+					margin-bottom 0
+		&__block
+			padding 30px 40px
+			background white
+		&__label
+			display block
+			margin-bottom 25px
+		&__info
+			display flex
+			align-items center
+			margin-bottom 15px
+			font-size 24px
+			& > *
+				 &:not(:last-child)
+						margin-right 10px
+		&__number
+			font-weight bold
+		&__descr
+			font-size 12px
+		&__row
+			display flex
+			& > *
+				 &:not(:last-child)
+						margin-right 20px
+		&-contacts
+			position relative
+			display flex
+			flex-direction column
+			padding-left 50px
+			font-size 14px
+			& > *
+				 margin 3px 0
+				 &:first-child
+						margin-top 0
+				 &:last-child
+						margin-bottom 0
+			&__icon
+				position absolute
+				top 0
+				left 0
+				size(35px)
+			&__link
+				font-size 12px

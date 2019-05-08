@@ -1,21 +1,21 @@
-.popup.mfp-hide#js-popup-consultation
+.popup.mfp-hide#js-popup-upgrade
 	.hide-on-succes
 		header.popup__header
-			span.popup__title Получить консультацию
+			span.popup__title Что можно улучшить на этой странице?
 			.popup-close
 				+icon('popup-close__icon', 'close')
 		.popup__body
 			form.popup__form.form
 				.form__body
-					.form-line
-						.form-group.form-group--width-m.form-group--required
-							label.form-group__label Контактный телефон
-							input.input(placeholder="+7(912)123-34-45" type="phone" name="phone")
-
-					.form-line
+					.form-line.form-group--required
 						.form-group
 							label.form-group__label Вопросы и ответы
-							textarea.textarea-field(placeholder="Здравствуйте, меня интересует...")
+							textarea.textarea-field(placeholder="Здравствуйте,на этой странице можно..." name="req-textarea")
+
+					.form-line
+						.form-group.form-group--width-m
+							label.form-group__label Электронная почта
+							input.input(placeholder="Введите свой email" type="email" name="no-req-email")
 
 					.form-line
 						.form-group

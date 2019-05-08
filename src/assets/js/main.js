@@ -99,6 +99,7 @@ $(function () {
 	let formValidate = function () {
 		$('.form').each(function () {
 			$(this).on(' submit', function () {
+				// $('.form-success__block').hide();
 				$(this).validate({
 					rules: {
 						name: {
@@ -111,6 +112,9 @@ $(function () {
 							required: true,
 							email: true
 						},
+						"req-textarea": {
+							required: true,
+						},
 						password: {
 							required: true
 						}
@@ -119,7 +123,8 @@ $(function () {
 						name: 'Введите корректное имя',
 						phone: 'Введите корректный номер',
 						email: 'Введите корректный email',
-						password: 'Введите корректный пароль'
+						password: 'Введите корректный пароль',
+						"req-textarea": "Заполните поле"
 					},
 					errorPlacement: function (error, element) {
 						console.log(error);
@@ -129,6 +134,7 @@ $(function () {
 				});
 				if ($(this).valid()) {
 					let wrap = $(this)[0].closest('.hide-on-succes');
+					console.log(wrap);
 					if (wrap) {
 						$(wrap).siblings('.show-on-succes').show();
 						$(wrap).hide();

@@ -12,6 +12,14 @@
 
 .location__body
 	&.is-location-choose
+		@media screen and (max-width: md)
+			position fixed
+			top 0
+			left 0
+			right 0
+			bottom 0
+			background rgba(0,0,0,.3)
+			z-index 3
 		.location-choose
 			display block
 
@@ -45,9 +53,21 @@
 	box-shadow 0 0 5px 0 rgba(159, 197, 178, 0.5)
 	z-index 1
 	border-radius 4px
+	@media screen and (max-width: md)
+		position fixed
+		top auto
+		left 0
+		bottom 0
+		right 0
+		flex-direction column
+		border 2px solid ripe-lemon
+
 	& > *
 		 &:not(:last-child)
 				margin-right 15px
+				@media screen and (max-width: md)
+					margin-right 0
+					margin-bottom 10px
 	&::before
 		position absolute
 		top -10px
@@ -58,6 +78,8 @@
 		border-style solid
 		border-width 0 10px 10px 10px
 		border-color transparent transparent white transparent
+		@media screen and (max-width: md)
+			display none
 
 	&__text
 		font-size 18px
@@ -92,6 +114,27 @@
 	border 2px solid ripe-lemon
 	border-radius 4px
 	z-index 1
+	@media screen and (max-width: md)
+		position fixed
+		top 60px
+		right 60px
+		left 20px
+		bottom 20px
+		width auto
+	&__close
+		position absolute
+		top -30px
+		right 0
+		display none
+		justify-content center
+		align-items center
+		size(30px)
+		@media screen and (max-width: md)
+			display flex
+		&-icon
+			size(16px)
+			fill ripe-lemon
+			cursor pointer
 	&__header
 		border-bottom 2px solid ripe-lemon
 		.input

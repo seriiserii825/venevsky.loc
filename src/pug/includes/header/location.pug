@@ -10,6 +10,8 @@
 				.btn.btn--bg-green.location-question__btn(data-location="yes") Да, верно
 				.btn.btn--border-green.location-question__btn(data-location="no") Нет, уточнить регион
 		.location-choose
+			.location-choose__close
+				+icon('location-choose__close-icon', 'close')
 			.location-choose__header
 				input(type="text" placeholder="Поиск по городу или индексу").input.input--size-small#js-location-input
 			.location-choose__body

@@ -85,8 +85,12 @@ $(function () {
 			$('#js-location-input').val($(this).text());
 		});
 
-		$('#js-location__header').on('click', function () {
+		$('#js-location__header, .location-choose__close').on('click', function () {
 			$('#js-location__body').addClass('is-location-choose');
+		});
+
+		$('.location-choose__close').on('click', function () {
+			$('#js-location__body').hide();
 		});
 	};
 

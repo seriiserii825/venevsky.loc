@@ -190,7 +190,6 @@ let popularCategoriesSlider = function () {
 			slidesToScroll: 1
 		});
 	} else if ($(window).width() > 768 && sliderElement.hasClass('slick-initialized')) {
-		console.log('> 768');
 		sliderElement.slick('unslick');
 	}
 

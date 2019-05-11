@@ -19,15 +19,14 @@ header.header
 
 	.header-main
 		.container
-			.logo
+			.logo.header-main__logo.header-main__item
 				img.logo__img(src="assets/i/logo.jpg", alt="logo")
 				span.logo__text Продажа стройматериалов
 
 			include navigation/catalog-nav
 
-			.header-main__search.search
+			.header-main__search.header-main__item.search
 				input.input.input--size-small.search__input(type="text" placeholder="Артикул или название товара")
 				+icon('search__icon', 'search')
 			include order-callback
 			include basket-prev
-

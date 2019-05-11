@@ -5,6 +5,9 @@
 @import 'partials/variables'
 @import 'partials/mixins'
 
+*
+	box-sizing border-box
+
 body
 	margin 0
 	padding 0
@@ -37,7 +40,9 @@ h6
 .container
 	margin 0 auto
 	padding 0 80px
-	max-width 1080px
+	max-width 1240px
+	@media screen and (max-width xl)
+		padding 0 30px
 
 ul
 	reset-list()
@@ -60,7 +65,9 @@ p
 	font-size 40px
 	line-height 1.25
 
-@import 'blocks/header'
+@import 'blocks/basket-prev'
+@import 'blocks/order-callback'
+@import 'blocks/header/header'
 @import 'blocks/popups/popups'
 @import 'blocks/form'
 @import 'blocks/action'
@@ -74,8 +81,6 @@ p
 @import 'blocks/search'
 @import 'blocks/logo'
 @import 'blocks/catalog-nav'
-@import 'blocks/order-callback'
-@import 'blocks/basket-prev'
 @import 'blocks/banner'
 @import 'blocks/categories-prev'
 @import 'blocks/advantages'

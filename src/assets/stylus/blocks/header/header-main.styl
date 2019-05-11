@@ -1,0 +1,43 @@
+.header-main
+	padding 20px 0
+	color white
+	background deep-teal
+	.container
+		position relative
+		display flex
+		align-items center
+		& > *
+			 &:not(:last-child)
+					margin-right 40px
+					@media screen and (max-width xl)
+						margin-right 30px
+
+		.header-main__order-callback
+			@media screen and (max-width xl)
+				margin-right 0
+
+		@media screen and (max-width xl)
+			order 5
+			margin-left auto
+			margin-right 0
+
+	&__logo
+		@media screen and (max-width xl)
+			order 1
+	&__catalog-nav
+		@media screen and (max-width xl)
+			order 2
+	&__search
+		@media screen and (max-width xl)
+			order 3
+	&__order-callback
+		@media screen and (max-width xl)
+			order 5
+			margin-left auto
+			margin-right 0
+	&__basket-prev
+		margin-left auto
+		@media screen and (max-width xl)
+			order 4
+			margin-left 0
+			margin-right 30px

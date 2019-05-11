@@ -12,6 +12,10 @@
 		color white
 		background deep-teal-lightest
 
+
+	&__col
+		flex 1
+
 	&-bottom
 		padding 10px 0
 		font-size 12px
@@ -47,10 +51,26 @@
 
 	&-main
 		display flex
+		justify-content space-between
 		& > *
 			flex 1
 			 &:not(:last-child)
 					margin-right 20px
+		.footer-navigation
+			flex 2
+			display flex
+			justify-content space-between
+			@media screen and (max-width xl)
+				display block
+				flex 1
+			& > *
+				@media screen and (max-width xl)
+					margin 20px 0
+					&:first-child
+							margin-top 0
+					&:last-child
+							margin-bottom 0
+
 
 	&-nav
 		&__list

@@ -12,11 +12,27 @@
 		width calc(25% - 20px)
 		&:nth-child(4n+4)
 			margin-right 0
+			@media screen and (max-width xl)
+				margin-right 25px
+		&:nth-child(3n+3)
+			@media screen and (max-width xl)
+				margin-right 0
+
+		@media screen and (max-width xl)
+			flex 1 0 calc(33% - 25px)
+			margin-right 25px
+			margin-bottom 25px
+			max-width 33%
+			width calc(33% - 25px)
+
 
 .categories-prev__item
 	background white
 	border-radius 4px
 	overflow hidden
+	&.categories-prev__item--hide-on-mobile
+		@media screen and (max-width xl)
+			display none
 
 .categories-prev__img
 	width 255px

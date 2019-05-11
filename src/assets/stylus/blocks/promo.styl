@@ -2,10 +2,18 @@
 	display grid
 	grid-template-columns repeat(3, 1fr)
 	grid-column-gap 30px
+	@media screen and (max-width xl)
+		grid-template-columns repeat(2, 340px)
+		justify-content center
+
 
 .promo-prev
 	border-radius 4px
 	overflow hidden
+	&.promo-prev--tablet-hide
+		@media screen and (max-width xl)
+			display none
+
 
 .promo-prev__header
 	position relative

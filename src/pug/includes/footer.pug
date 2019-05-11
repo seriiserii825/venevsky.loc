@@ -12,23 +12,24 @@ mixin footerNavLink(link, text, descr)
 				include order-callback
 
 			.footer-main
-				.footer__col
-					span.footer__title О нас
-					ul.footer-nav__list
-						+footerNavLink('', 'Оплата и доставка', '')
-						+footerNavLink('', 'Гарантия', '')
-						+footerNavLink('', 'Услуги по обработке металла', '')
-						+footerNavLink('', 'Компания', '')
-						+footerNavLink('', 'Контакты', 'Связь с директором')
+				.footer-navigation
+					.footer__col
+						span.footer__title О нас
+						ul.footer-nav__list
+							+footerNavLink('', 'Оплата и доставка', '')
+							+footerNavLink('', 'Гарантия', '')
+							+footerNavLink('', 'Услуги по обработке металла', '')
+							+footerNavLink('', 'Компания', '')
+							+footerNavLink('', 'Контакты', 'Связь с директором')
 
-				.footer__col
-					span.footer__title Каталог
-					ul.footer-nav__list
-						+footerNavLink('', 'Все для кровли', '')
-						+footerNavLink('', 'Фасад', '')
-						+footerNavLink('', 'Профнастил', '')
-						+footerNavLink('', 'Листовой прокат', '')
-						+footerNavLink('', 'Рулонная сталь', '')
+					.footer__col
+						span.footer__title Каталог
+						ul.footer-nav__list
+							+footerNavLink('', 'Все для кровли', '')
+							+footerNavLink('', 'Фасад', '')
+							+footerNavLink('', 'Профнастил', '')
+							+footerNavLink('', 'Листовой прокат', '')
+							+footerNavLink('', 'Рулонная сталь', '')
 
 				.footer__col
 					.footer__block

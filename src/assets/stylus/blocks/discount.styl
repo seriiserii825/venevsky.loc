@@ -6,6 +6,8 @@
 	grid-template-columns repeat(4, 1fr)
 	grid-column-gap 10px
 	border-radius 4px
+	@media screen and (max-width xl)
+		grid-template-columns repeat(3, 1fr)
 
 .product-prev
 	border 2px solid transparent
@@ -13,6 +15,9 @@
 	&:hover
 		border-color ripe-lemon
 		box-shadow 0 0 30px 0 rgba(0j 0, 0, 0.1)
+	&.product-prev--hide-on-tablet
+		@media screen and (max-width xl)
+			display none
 
 		.product-prev__footer
 			opacity 1

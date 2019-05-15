@@ -34,13 +34,32 @@ $(function () {
 		}
 	};
 
-
 	if ($(window).width() < 768) {
 		$('#js-categories-prev').slick({
 			slidesToShow: 2,
 			slidesToScroll: 1
 		});
 	}
+
+	let catalogNavHover = function () {
+		$('.catalog-nav__item').hover(function () {
+			let catalogSubnav = $(this).find('.catalog-subnav');
+			let catalogSubnavInner = $(this).find('.catalog-subnav__inner');
+
+			if (catalogSubnavInner.length === 1) {
+				catalogSubnav.css('width', 925);
+			} else {
+				catalogSubnav.css('width', 455);
+			}
+
+			// catalogSubnav.css('width', 925);
+			// console.log(catalogSubnavInner);
+			// console.log(catalogSubnavInner.length);
+		}, function () {
+			// let catalogSubnav = $(this).find('.catalog-subnav');
+			// catalogSubnav.css('width', 925);
+		});
+	};
 
 	let productPrevSlider = function () {
 		let sliderCount = $('.product-slider__count');
@@ -191,6 +210,7 @@ $(function () {
 
 	productPrevSlider();
 	sandwitch();
+	catalogNavHover();
 	locationChoose();
 	popupLink();
 	fileupload();

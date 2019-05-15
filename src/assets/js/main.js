@@ -24,6 +24,14 @@ $(function () {
 			let sandwitch = $(this).find('.sandwitch');
 			sandwitch.toggleClass('sandwitch--active');
 		});
+
+		if ($(window).width() < 768) {
+			$(document).on('click', '.sandwitch', function () {
+				$(this).toggleClass('sandwitch--active');
+				$('body').toggleClass('fixed');
+				$('.mobile-nav__wrapper').toggleClass('mobile-nav__wrapper--active');
+			});
+		}
 	};
 
 
@@ -67,30 +75,29 @@ $(function () {
 		$('.location-question__btn').on('click', function () {
 			var answer = $(this).data('location');
 			if (answer === 'no') {
-				$('#js-location__body').addClass('is-location-choose');
+				$('.location__body').addClass('is-location-choose');
 			}
-			$('#js-location-question').hide();
+			$('.location-question').hide();
 		});
 
-		$('#js-location-choose__list .location-choose__item').on('click', function () {
+		$('.location-choose__list .location-choose__item').on('click', function () {
 			var locationChooseItemText = $(this).text();
-			var locationCurrent = $('#js-location__current');
+			var locationCurrent = $('.js-location__current');
+			let jsLocationInput = $('.js-location__input');
 
 			locationCurrent.text(locationChooseItemText);
+			jsLocationInput.val(locationChooseItemText);
 
-			$('#js-location__body').removeClass('is-location-choose');
+			$('.location__body').removeClass('is-location-choose');
+
 		});
 
-		$('#js-location-choose__list .location-choose__item').on('mouseenter', function () {
-			$('#js-location-input').val($(this).text());
-		});
-
-		$('#js-location__header, .location-choose__close').on('click', function () {
-			$('#js-location__body').addClass('is-location-choose');
+		$('.location__header, .location-choose__close').on('click', function () {
+			$('.location__body').addClass('is-location-choose');
 		});
 
 		$('.location-choose__close').on('click', function () {
-			$('#js-location__body').hide();
+			$('.location__body').hide();
 		});
 	};
 

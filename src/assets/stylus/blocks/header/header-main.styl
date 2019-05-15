@@ -2,6 +2,8 @@
 	padding 20px 0
 	color white
 	background deep-teal
+	@media screen and (max-width: md)
+		padding 13px 0
 	.container
 		position relative
 		display flex
@@ -20,10 +22,23 @@
 			order 5
 			margin-left auto
 			margin-right 0
+	&__actions
+		display flex
+		align-items center
+		order 3
+		@media screen and (max-width: md)
+			margin-left auto
+		& > *
+			 &:not(:last-child)
+					margin-right 40px
+					@media screen and (max-width xl)
+						margin-right 30px
 
 	&__logo
 		@media screen and (max-width xl)
 			order 1
+		@media screen and (max-width: md)
+			display none
 	&__catalog-nav
 		@media screen and (max-width xl)
 			order 2
@@ -35,6 +50,8 @@
 			order 5
 			margin-left auto
 			margin-right 0
+		@media screen and (max-width: md)
+			display none
 	&__basket-prev
 		margin-left auto
 		@media screen and (max-width xl)

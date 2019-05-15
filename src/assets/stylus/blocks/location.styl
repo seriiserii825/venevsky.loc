@@ -142,9 +142,13 @@
 			box-sizing border-box
 	&__body
 		position relative
+		padding 15px 0
 		height auto
 		max-height 220px
+		background white
 		overflow auto
+		@media screen and (max-width: md)
+			max-height 100%
 		&:before
 			content''
 			position absolute
@@ -165,15 +169,22 @@
 			height 30px
 			background-image linear-gradient(to top, white, rgba(255, 255, 255, 0))
 			z-index 2
+			@media screen and (max-width: md)
+				bottom -8px
 	&__list
-		padding 15px 0
-
+		// margin-bottom 35px
 	&__item
 		padding 5px 15px
 		font-size 14px
 		font-weight 600
 		line-height 18px
+		color text-color
 		cursor pointer
 		transition all .2s linear
 		&:hover
 			background ripe-lemon
+.location__mobile
+	color eucaliptus
+	.location__icon
+		fill eucaliptus
+

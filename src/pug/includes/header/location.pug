@@ -1,10 +1,10 @@
 
 .header-top__location.location
-	header.location__header#js-location__header
+	header.location__header
 		+icon('location__icon', 'map')
-		span.location__current#js-location__current Нижний Новгород
-	.location__body#js-location__body
-		.location-question#js-location-question
+		span.location__current.js-location__current Нижний Новгород
+	.location__body
+		.location-question
 			.location-question__text Ваш регион доставки Нижний Новгород Нижний Новгород Нижний Новгород?
 			.location-question__buttons
 				.btn.btn--bg-green.location-question__btn(data-location="yes") Да, верно
@@ -13,9 +13,9 @@
 			.location-choose__close
 				+icon('location-choose__close-icon', 'close')
 			.location-choose__header
-				input(type="text" placeholder="Поиск по городу или индексу").input.input--size-small#js-location-input
+				input(type="text" placeholder="Поиск по городу или индексу").input.input--size-small.js-location__input
 			.location-choose__body
-				ul.location-choose__list#js-location-choose__list
+				ul.location-choose__list
 					li.location-choose__item Москва
 					li.location-choose__item Санкт-Петербург
 					li.location-choose__item Екатеринбург

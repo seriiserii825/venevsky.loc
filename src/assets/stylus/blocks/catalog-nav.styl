@@ -10,9 +10,31 @@
 	& > *
 		&:not(:last-child)
 			margin-right 10px
+	.sandwitch
+		@media screen and (max-width md)
+			display none
 
 .catalog-nav__title
 	white-space nowrap
+	@media screen and (max-width md)
+		display none
+	&.catalog-nav__title--mobile
+		display none
+		@media screen and (max-width md)
+			display block
+.catalog-nav__title--mobile
+	position relative
+	padding-right 20px
+	&::after
+		content ''
+		position absolute
+		top 8px
+		right 0
+		width 0
+		height 0
+		border-style solid
+		border-width 5px 5px 0 5px
+		border-color white transparent transparent transparent
 
 .catalog-nav__body
 	position absolute

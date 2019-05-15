@@ -1,0 +1,61 @@
+.mobile-nav__wrapper
+	.sandwitch
+		.sandwitch__line.sandwitch__line--top
+		.sandwitch__line.sandwitch__line--middle
+		.sandwitch__line.sandwitch__line--bottom
+	.mobile-nav__content
+		.mobile-nav__main
+			ul.mobile-nav__list
+				li.mobile-nav__item
+					a(href='').mobile-nav__link Оплата и доставка
+				li.mobile-nav__item
+					a(href='').mobile-nav__link Гарантия
+				li.mobile-nav__item
+					a(href='').mobile-nav__link Услуги
+				li.mobile-nav__item
+					a(href='').mobile-nav__link Компания
+				li.mobile-nav__item
+					a(href='').mobile-nav__link Контакты
+			ul.mobile-nav-user-nav__list
+				li.mobile-nav-user-nav__item
+					a(href="").mobile-nav-user-nav__link Войти
+			.location__mobile
+				header.location__header
+					+icon('location__icon', 'map')
+					span.location__current.js-location__current Нижний Новгород
+				.location__body
+					.location-question
+						.location-question__text Ваш регион доставки Нижний Новгород Нижний Новгород Нижний Новгород?
+						.location-question__buttons
+							.btn.btn--bg-green.location-question__btn(data-location="yes") Да, верно
+							.btn.btn--border-green.location-question__btn(data-location="no") Нет, уточнить регион
+					.location-choose
+						.location-choose__close
+							+icon('location-choose__close-icon', 'close')
+						.location-choose__header
+							input(type="text" placeholder="Поиск по городу или индексу").input.input--size-small
+						.location-choose__body
+							ul.location-choose__list
+								li.location-choose__item Москва
+								li.location-choose__item Санкт-Петербург
+								li.location-choose__item Екатеринбург
+								li.location-choose__item Нижний Новгород
+								li.location-choose__item Пермь
+								li.location-choose__item Казань
+								li.location-choose__item Новосибирск
+								li.location-choose__item Челябинск
+								li.location-choose__item Москва
+								li.location-choose__item Санкт-Петербург
+								li.location-choose__item Екатеринбург
+								li.location-choose__item Нижний Новгород
+								li.location-choose__item Пермь
+								li.location-choose__item Казань
+								li.location-choose__item Новосибирск
+								li.location-choose__item Челябинск
+
+
+		.mobile-nav__callback
+			.order-callback
+				span.order-callback__desc Звоните круглосуточно
+				a(href="tel:+74993348888").order-callback__phone +7 499 334-88-88
+				a(href="").order-callback__link.link--white.link--underline Заказать звонок

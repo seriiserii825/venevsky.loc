@@ -45,10 +45,16 @@
 	background white
 	border-radius 4px
 	box-shadow: 0 0 5px 0 rgba(159, 197, 178, 0.5)
-	border 1px solid red
 	z-index 1
 	@media screen and (max-width xl)
 		left 20px
+	@media screen and (max-width: md)
+		position fixed
+		top 50px
+		bottom 0
+		width calc(100% - 40px)
+		border-radius 0
+		border 1px solid ripe-lemon
 
 	&::before
 		position absolute
@@ -66,6 +72,8 @@
 
 .catalog-nav__list
 	width 255px
+	@media screen and (max-width: md)
+		width 100%
 
 .catalog-nav__label
 	display flex
@@ -73,6 +81,9 @@
 	padding 6px 15px
 	cursor pointer
 	transition all .3s
+	@media screen and (max-width: md) {
+		border-bottom 1px solid lightgray
+	}
 	&:hover
 		background ripe-lemon
 	& > *
@@ -90,29 +101,46 @@
 	border-style solid
 	border-width 5px 0 5px 5px
 	border-color transparent transparent transparent black
+	@media screen and (max-width: md)
+		transform rotate(90deg)
 
 .catalog-nav__item
 	&:hover .catalog-subnav
 		display block
 
+	@media screen and (max-width: md)
+		background ripe-lemon
+
 .catalog-subnav__inner
 	display flex
+	@media screen and (max-width: md) {
+		display block
+	}
 	& > *
 		 &:not(:last-child)
 				margin-right 30px
+				@media screen and (max-width: md) {
+					margin-right 0
+				}
+	@media screen and (max-width: md)
+		display block
 .catalog-subnav
 	position absolute
 	top 0
 	bottom 0
-	// left calc(100% - 2px)
 	left 255px
 	display none
 	padding 15px 20px
-	// width 925px
 	background white
 	border-left 1px solid ripe-lemon
+	@media screen and (max-width: md)
+		position static
+		width 100%
 	.simplebar-vertical
 		margin 10px
+		@media screen and (max-width: md) {
+			margin 0
+		}
 	&__col
 		flex 1
 

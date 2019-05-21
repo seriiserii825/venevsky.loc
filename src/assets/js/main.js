@@ -52,9 +52,6 @@ $(function () {
 				catalogSubnav.css('width', 455);
 			}
 
-			// catalogSubnav.css('width', 925);
-			// console.log(catalogSubnavInner);
-			// console.log(catalogSubnavInner.length);
 		}, function () {
 			// let catalogSubnav = $(this).find('.catalog-subnav');
 			// catalogSubnav.css('width', 925);
@@ -226,7 +223,6 @@ let popularCategoriesSlider = function () {
 	let sliderElement = $('#js-categories-prev');
 
 	if ($(window).width() < 768 && !(sliderElement.hasClass('slick-initialized'))) {
-		console.log('< 768');
 		sliderElement.slick({
 			slidesToShow: 2,
 			slidesToScroll: 1
